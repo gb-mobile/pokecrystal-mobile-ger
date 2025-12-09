@@ -449,7 +449,13 @@ ComposeMailMessage:
 	ld de, wTempMailAuthor
 	ld bc, NAME_LENGTH - 1
 	call CopyBytes
+	ld hl, wTempMailNationality - 1
+	ld a, "@"
+	ld [hli], a ; Prevents player name overflow.
+	ld a, "E"
+	ld [hli], a ; European mail.
 	ld a, "G"
+	ld [hl], a ; German mail.
 	ld hl, wPlayerID
 	ld bc, 2
 	call CopyBytes
