@@ -1791,14 +1791,12 @@ DepositPokemon:
 	call Textbox
 	call WaitBGMap
 	hlcoord 1, 16
-	ld de, PCString_Stored
+	ld de, wStringBuffer1
 	call PlaceString
 	ld l, c
 	ld h, b
 	ld de, PCString_Stored
 	call PlaceString
-	ld a, "!"
-	ld [bc], a
 	ld c, 50
 	call DelayFrames
 	and a
