@@ -4905,6 +4905,7 @@ Function11a00e:
 	dec a
 	jr z, .asm_11a081
 	farcall Function11a0ca
+	ret
 
 .asm_11a039
 	ld a, BANK(w3_d800)
